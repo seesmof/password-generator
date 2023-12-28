@@ -65,6 +65,9 @@ def renderSettingsSection(
     automaticCopyCheckbox = CTkCheckBox(
         root, text="Automatically copy password", font=("Arial", 12, "bold")
     )
+    autoGenerateCheckbox = CTkCheckBox(
+        root, text="Generate on startup", font=("Arial", 12, "bold")
+    )
     passwordLengthHeading = CTkLabel(
         root, text="Password Length", font=("Arial", 12, "bold")
     )
@@ -78,8 +81,9 @@ def renderSettingsSection(
     toggleNumbersCheckbox.place(x=0, y=160)
     toggleSpecialsCheckbox.place(x=0, y=190)
     automaticCopyCheckbox.place(x=0, y=220)
-    passwordLengthHeading.place(x=0, y=250)
-    passwordLengthSlider.place(x=0, y=280)
+    autoGenerateCheckbox.place(x=0, y=250)
+    passwordLengthHeading.place(x=0, y=280)
+    passwordLengthSlider.place(x=0, y=310)
 
     return (
         changeSettingsHeading,
@@ -88,6 +92,7 @@ def renderSettingsSection(
         toggleNumbersCheckbox,
         toggleSpecialsCheckbox,
         automaticCopyCheckbox,
+        autoGenerateCheckbox,
         passwordLengthHeading,
         passwordLengthSlider,
     )
@@ -108,6 +113,7 @@ def renderMainTab(root) -> None:
         toggleNumbersCheckbox,
         toggleSpecialsCheckbox,
         automaticCopyCheckbox,
+        autoGenerateCheckbox,
         passwordLengthHeading,
         passwordLengthSlider,
     ) = renderSettingsSection(root)
@@ -143,6 +149,7 @@ def renderMainTab(root) -> None:
         toggleNumbersCheckbox,
         toggleSpecialsCheckbox,
         automaticCopyCheckbox,
+        autoGenerateCheckbox,
         passwordLengthSlider,
     ]
 
@@ -161,3 +168,9 @@ def renderMainTab(root) -> None:
             settings=localSettings,
             settingsElements=settingsElements,
         )
+
+    if autoGenerateCheckbox.get():
+        print(passwordLengthSlider.get())
+        generatePassword(passwordOuputBox, *settingsElements)
+        if automaticCopyCheckbox.get():
+            copyGeneratedPassword(passwordOuputBox)

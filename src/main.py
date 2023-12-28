@@ -12,7 +12,7 @@ console = Console()
 def configureApp():
     app = CTk()
 
-    app.geometry("420x360")
+    app.geometry("420x390")
     app.title("Secure Password Generator")
     app.resizable(False, False)
     app.bind("<Escape>", lambda event: closeApp(app, event=event))

@@ -40,7 +40,7 @@ def generatePassword(box: CTkEntry, *settingsElements) -> None:
     useNumber = settingsElements[2].get()
     useSymbols = settingsElements[3].get()
     autoCopy = settingsElements[4].get()
-    length = int(settingsElements[5].get())
+    length = int(settingsElements[6].get())
 
     if not any([useLetters, useUppercase, useNumber, useSymbols]):
         AlertPopup("Please select at least one type of character to include.")
@@ -57,6 +57,7 @@ def generatePassword(box: CTkEntry, *settingsElements) -> None:
         characters += "!@#$%^&*()_+-=[]{}|;':\",./<>?`~"
 
     password = "".join(random.choices(characters, k=length))
+    console.print(length)
 
     box.insert(0, password)
 

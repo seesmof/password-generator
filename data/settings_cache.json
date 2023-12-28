@@ -3,6 +3,7 @@
   "includeUppercase": 1,
   "includeNumbers": 1,
   "includeSymbols": 1,
-  "autoCopy": 1,
+  "autoCopy": 0,
+  "autoGenerate": 0,
   "length": 32
 }

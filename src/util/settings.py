@@ -23,6 +23,7 @@ def loadSettingsData():
             "includeNumbers": True,
             "includeSymbols": True,
             "autoCopy": False,
+            "autoGenerate": False,
             "length": 32,
         }
 
@@ -35,6 +36,7 @@ def loadSettings(settings):
         settings["includeNumbers"],
         settings["includeSymbols"],
         settings["autoCopy"],
+        settings["autoGenerate"],
         settings["length"],
     ) = (
         data["includeLetters"],
@@ -42,6 +44,7 @@ def loadSettings(settings):
         data["includeNumbers"],
         data["includeSymbols"],
         data["autoCopy"],
+        data["autoGenerate"],
         data["length"],
     )
 
@@ -53,6 +56,7 @@ def setSettings(
     includeNumbers: CTkCheckBox,
     includeSymbols: CTkCheckBox,
     autoCopy: CTkCheckBox,
+    autoGenerate: CTkCheckBox,
     outputLength: CTkSlider,
 ):
     includeLetters.select() if settings["includeLetters"] else includeLetters.deselect()
@@ -62,6 +66,7 @@ def setSettings(
     includeNumbers.select() if settings["includeNumbers"] else includeNumbers.deselect()
     includeSymbols.select() if settings["includeSymbols"] else includeSymbols.deselect()
     autoCopy.select() if settings["autoCopy"] else autoCopy.deselect()
+    autoGenerate.select() if settings["autoGenerate"] else autoGenerate.deselect()
     outputLength.set(settings["length"])
 
 
@@ -72,6 +77,7 @@ def saveSettings(
     includeNumbers: CTkCheckBox,
     includeSymbols: CTkCheckBox,
     autoCopy: CTkCheckBox,
+    autoGenerate: CTkCheckBox,
     outputLength: CTkSlider,
 ):
     settings["includeLetters"] = includeLetters.get()
@@ -79,6 +85,7 @@ def saveSettings(
     settings["includeNumbers"] = includeNumbers.get()
     settings["includeSymbols"] = includeSymbols.get()
     settings["autoCopy"] = autoCopy.get()
+    settings["autoGenerate"] = autoGenerate.get()
     settings["length"] = int(outputLength.get())
 
     saveSettingsData(settings)
