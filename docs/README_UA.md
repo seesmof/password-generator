@@ -24,7 +24,7 @@
 
 ### Встановлення та використання
 
-1. Завантажте [останню версію](https://github.com/seesmof/Strong-Password-Generator/releases/latest) програми та розархівуйте її.
+1. Завантажте [останню версію](https://github.com/seesmof/strong-password-generator/archive/refs/tags/v1.0.0.zip) програми та розархівуйте її.
 2. Запустіть програму за допомогою файлу `Run.vbs`.
 3. Насолоджуйтесь!
 

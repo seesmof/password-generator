@@ -26,7 +26,7 @@ Strong Password Generator is a simple and easy-to-use password generator. It all
 
 ### Installation and Usage
 
-1. Download the [latest version](https://github.com/seesmof/Strong-Password-Generator/releases/latest) of the program and unzip it.
+1. Download the [latest version](https://github.com/seesmof/strong-password-generator/archive/refs/tags/v1.0.0.zip) of the program and unzip it.
 2. Run the program using `Run.vbs` file.
 3. Enjoy!
 
