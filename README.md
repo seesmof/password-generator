@@ -13,9 +13,29 @@
 ### Table of contents
 
 - [Table of contents](#table-of-contents)
+- [Overview](#overview)
+- [Installation and Usage](#installation-and-usage)
+- [Features](#features)
 - [Screenshots](#screenshots)
 - [Links](#links)
 - [License](#license)
+
+### Overview
+
+Strong Password Generator is a simple and easy-to-use password generator. It allows the user to choose the length of the password, whether to include uppercase letters, lowercase letters, numbers, and/or symbols, and whether to automatically copy the password to the clipboard. It is built using Python's [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) library.
+
+### Installation and Usage
+
+1. Download the [latest version](https://github.com/seesmof/Strong-Password-Generator/releases/latest) of the program and unzip it.
+2. Run the program using `Run.vbs` file.
+3. Enjoy!
+
+### Features
+
+- Option to automatically copy password to clipboard
+- Save and load settings data
+- Auto generate password on startup
+- Clean and easy to use interface
 
 ### Screenshots
 
