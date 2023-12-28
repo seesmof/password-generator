@@ -57,7 +57,6 @@ def generatePassword(box: CTkEntry, *settingsElements) -> None:
         characters += "!@#$%^&*()_+-=[]{}|;':\",./<>?`~"
 
     password = "".join(random.choices(characters, k=length))
-    console.print(length)
 
     box.insert(0, password)
 

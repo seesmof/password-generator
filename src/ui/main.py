@@ -170,7 +170,6 @@ def renderMainTab(root) -> None:
         )
 
     if autoGenerateCheckbox.get():
-        print(passwordLengthSlider.get())
         generatePassword(passwordOuputBox, *settingsElements)
         if automaticCopyCheckbox.get():
             copyGeneratedPassword(passwordOuputBox)
